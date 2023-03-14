@@ -11,7 +11,7 @@ import Contacts from './Contacts';
 function App() {
   return (
     <div className="page">
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path='/' element={<Main />}/>
         <Route path='/portfolio' element={<Portfolio />}/>

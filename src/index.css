@@ -11,3 +11,8 @@
 
 @import url(./blocks/main/main.css);
 @import url(./blocks/main/__quote/main__quote.css);
+
+@import url(./blocks/contacts/contacts.css);
+@import url(./blocks/contacts/__content/contacts__content.css);
+@import url(./blocks/contacts/__title/contacts__title.css);
+@import url(./blocks/contacts/__title-span/contacts__title-span.css);
