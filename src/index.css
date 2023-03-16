@@ -26,3 +26,5 @@
 
 @import url(./blocks/portfolio/portfolio.css);
 @import url(./blocks/portfolio/__quote/portfolio__quote.css);
+@import url(./blocks/cards/__img/cards__img.css);
+@import url(./blocks/cards/cards.css);
