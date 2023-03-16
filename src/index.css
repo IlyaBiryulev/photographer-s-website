@@ -3,6 +3,7 @@
 
 @import url(./blocks/page/page.css);
 @import url(./blocks/header/header.css);
+@import url(./blocks/header/_dark-theme/header_dark-theme.css);
 @import url(./blocks/header/__logo/header__logo.css);
 @import url(./blocks/header/__menu/header__menu.css);
 @import url(./blocks/header/__list/header__list.css);
@@ -16,3 +17,12 @@
 @import url(./blocks/contacts/__content/contacts__content.css);
 @import url(./blocks/contacts/__title/contacts__title.css);
 @import url(./blocks/contacts/__title-span/contacts__title-span.css);
+@import url(./blocks/contacts/__subtitle/contacts__subtitle.css);
+@import url(./blocks/contacts/__quote/contacts__quote.css);
+@import url(./blocks/contacts/__list/contacts__list.css);
+@import url(./blocks/contacts/__link/contacts__link.css);
+@import url(./blocks/contacts/__form-title/contacts__form-title.css);
+@import url(./blocks/contacts/__form-btn/contacts__form-btn.css);
+
+@import url(./blocks/portfolio/portfolio.css);
+@import url(./blocks/portfolio/__quote/portfolio__quote.css);
