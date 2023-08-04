@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Main from '../Main/Main';
 import Portfolio from '../Portfolio/Portfolio';
-import AboutMe from './AboutMe';
+import AboutMe from '../AboutMe/AboutMe';
 import Contacts from '../Contacts/Contacts';
 
 function App() {

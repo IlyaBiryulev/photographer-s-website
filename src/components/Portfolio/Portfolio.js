@@ -1,6 +1,6 @@
 import './Portfolio.css'
 import Header from "../Header/Header";
-import Card1 from "../image/Card1.jpg";
+import Card1 from "../../image/Card1.jpg";
 import {cardImage} from "../../utils/cardImage.js"
 
 console.log(Card1)

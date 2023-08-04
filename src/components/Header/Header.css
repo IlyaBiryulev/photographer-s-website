@@ -4,7 +4,6 @@
   font-family: 'Inter', Arial, sans-serif;
   display: flex;
   justify-content: space-between;
-  /* background-color: #000; */
 }
 
 .header_dark-theme {
@@ -22,7 +21,7 @@
 .header__logo {
   width: 146px;
   height: 51px;
-  background-image: url(../../../image/BIRYULEV.png);
+  background-image: url(../../image/BIRYULEV.png);
   background-position: center;
   background-repeat: no-repeat;
   margin-left: 10px;

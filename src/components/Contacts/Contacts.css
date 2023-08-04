@@ -72,7 +72,7 @@
 .contacts__form-btn {
   width: 150px;
   height: 50px;
-  background-image: url(../../../image/ContactFormButton.png);
+  background-image: url(../../image/ContactFormButton.png);
 }
 
 .contacts__form-btn:hover {
