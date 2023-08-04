@@ -1,6 +1,7 @@
-import Header from "./Header";
+import './Portfolio.css'
+import Header from "../Header/Header";
 import Card1 from "../image/Card1.jpg";
-import {cardImage} from "../utils/cardImage.js"
+import {cardImage} from "../../utils/cardImage.js"
 
 console.log(Card1)
 
@@ -14,6 +15,7 @@ function Portfolio() {
       <main className="portfolio">
         <p className="portfolio__quote">&quot;Большинство вещей в&nbsp;жизни&nbsp;&mdash; это моменты удовольствия и&nbsp;смущения на&nbsp;всю жизнь. Фотография&nbsp;&mdash; это момент смущения и&nbsp;наслаждения на&nbsp;всю жизнь&quot;.&mdash; Тони Бенн</p>
         <section className="cards">
+          {/* Разобраться как делать всплывающий текст */}
           <a href="#"><img src= {cardImage.one} className="cards__img" alt="изображение" /></a>
           <a href="#"><img src= {cardImage.two} className="cards__img" alt="изображение" /></a>
           <a href="#"><img src= {cardImage.three} className="cards__img" alt="изображение" /></a>

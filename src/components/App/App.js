@@ -1,15 +1,14 @@
 import React from 'react';
-import { Routes } from 'react-router-dom';
-import { Route } from 'react-router-dom';
-import '../index.css';
-import Main from './Main';
-import Portfolio from './Portfolio';
+import { Routes, Route } from 'react-router-dom';
+import './App.css'
+import Main from '../Main/Main';
+import Portfolio from '../Portfolio/Portfolio';
 import AboutMe from './AboutMe';
-import Contacts from './Contacts';
+import Contacts from '../Contacts/Contacts';
 
 function App() {
   return (
-    <div className="page">
+    <div className="app__content">
       <Routes>
         <Route path='/' element={<Main />}/>
         <Route path='/portfolio' element={<Portfolio />}/>

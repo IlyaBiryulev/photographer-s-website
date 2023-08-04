@@ -1,0 +1,48 @@
+.header {
+  max-width: 100%;
+  height: 55px;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #000; */
+}
+
+.header_dark-theme {
+  background-color: #000;
+}
+
+
+.header__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__logo {
+  width: 146px;
+  height: 51px;
+  background-image: url(../../../image/BIRYULEV.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+.header__menu {
+  max-width: 420px;
+  height: 20px;
+  margin: 21px 0 10px;
+}
+
+.header__menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding-right: 20px;
+}
+
+.header__menu-link_active {
+  text-decoration: underline;
+}

@@ -1,4 +1,5 @@
-import Header from "./Header";
+import './Contacts.css'
+import Header from "../Header/Header";
 
 function Contacts() {
   return (
@@ -10,7 +11,7 @@ function Contacts() {
         <ul className="contacts__list">
           <li><a href="https://vk.com/stormsi" className="contacts__link">ВКОНТАКТЕ</a></li>
           <li><a href="https://t.me/ilya_bir" className="contacts__link">TELEGRAM</a></li>
-          <li><a href="" className="contacts__link">INSTAGRAM</a></li>
+          <li><a href="2" className="contacts__link">INSTAGRAM</a></li>
           <li><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=birulevila@gmail.com" className="contacts__link">GMAIL</a></li>
         </ul>
         <p className="contacts__form-title">Или пиши через форму</p>

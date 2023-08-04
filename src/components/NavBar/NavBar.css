@@ -1,0 +1,25 @@
+.navbar {
+  max-width: 420px;
+  height: 20px;
+  margin: 21px 0 10px;
+}
+
+.navbar__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__menu-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding-right: 20px;
+}
+
+.navbar__menu-link_active {
+  text-decoration: underline;
+}

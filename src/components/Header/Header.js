@@ -1,4 +1,5 @@
-import NavBar from "./NavBar";
+import './Header.css'
+import NavBar from "../NavBar/NavBar";
 
 function Header() {
     return (
@@ -10,5 +11,5 @@ function Header() {
       </div>
     );
   }
-  
+
   export default Header;

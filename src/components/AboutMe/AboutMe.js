@@ -1,4 +1,5 @@
-import Header from "./Header";
+import './AboutMe.css'
+import Header from "../Header/Header";
 
 function AboutMe() {
   return (
