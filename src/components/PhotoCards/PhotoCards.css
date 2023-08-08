@@ -1,0 +1,13 @@
+.card {
+  width: 100%;
+}
+
+.card__img {
+  width: 350px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card__title {
+  margin: 0;
+}

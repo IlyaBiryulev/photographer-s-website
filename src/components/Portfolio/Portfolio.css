@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 27px 100px 27px;
+  margin: 27px 0 27px;
 }
 
 .portfolio__quote {
@@ -12,4 +12,11 @@
   max-width: 963px;
   text-align: center;
   margin: 0 0 31px;
+}
+
+.portfolio__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
+  row-gap: 25px;
 }
