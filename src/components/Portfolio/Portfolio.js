@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import PhotoCards from '../PhotoCards/PhotoCards'
 
 console.log()
-function Portfolio({photo}) {
+function Portfolio({ folder, photo }) {
   return (
     <div>
       <div className="header_dark-theme">
@@ -20,10 +20,11 @@ function Portfolio({photo}) {
           Тони Бенн
         </p>
         <div className="portfolio__cards">
-          {photo._embedded?.items.map((cards) =>
+          {folder._embedded?.items.map((cards) =>
             <PhotoCards
               cards = {cards}
               key={cards.resource_id}
+              photo={photo}
             />
           )}
         </div>

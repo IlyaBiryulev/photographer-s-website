@@ -9,12 +9,14 @@ import * as api from '../../utils/Api'
 
 function App() {
 
+  const [folder, setFolder] = useState([]);
   const [cardPhoto, setCardPhoto] = useState([]);
 
   const getPhotoCard = useCallback(
     async () => {
+      /* const folderName = folder._embedded?.items.map((function(i){return i.name})).find(function(value, index){return value[index]}) */
       try {
-        const data = await api.getPhotoCard();
+        const data = await api.getPhotoCard('test')
         if (data) {
           console.log(data)
           setCardPhoto(data)
@@ -25,9 +27,24 @@ function App() {
     },[]
   );
 
+  const getFolder = useCallback(
+    async () => {
+      try {
+        const data = await api.getFolder();
+        if (data) {
+          console.log(data)
+          setFolder(data)
+        }
+      } catch(err) {
+        console.error(err);
+      }
+    },[]
+  );
+
   useEffect(() => {
-    getPhotoCard()
-  },[getPhotoCard])
+    getPhotoCard();
+    getFolder()
+  },[getFolder, getPhotoCard])
 
   return (
     <div className="app__content">
@@ -41,6 +58,7 @@ function App() {
           element={
             <Portfolio
               photo = {cardPhoto}
+              folder = {folder}
             />
           }
         />
