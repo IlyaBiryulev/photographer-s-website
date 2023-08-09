@@ -3,6 +3,7 @@
 import './Portfolio.css'
 import Header from "../Header/Header";
 import PhotoCards from '../PhotoCards/PhotoCards'
+import ImagePopup from '../ImagePopup/ImagePopup';
 
 console.log()
 function Portfolio({ folder, photo }) {
@@ -29,6 +30,9 @@ function Portfolio({ folder, photo }) {
           )}
         </div>
       </main>
+      <ImagePopup
+        photo={photo}
+      />
     </div>
   );
 }
