@@ -1,7 +1,10 @@
 import React, { useEffect, useState, createContext,useCallback } from "react";
 import './Slider.css';
 import PropTypes from "prop-types";
+
 import SliderItem from "../SliderItems/SliderItem";
+import SliderArrow from "../SliderArrow/SliderArrow";
+import SliderDots from "../SliderDots/SliderDots";
 
 export const SliderContext = createContext();
 
@@ -13,16 +16,16 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
     let slideNumber = 0;
 
     if (slide + direction < 0) {
-      slideNumber = photo.length - 1;
+      slideNumber = photo._embedded?.total - 1;
     } else {
-      slideNumber = (slide + direction) % photo.length;
+      slideNumber = (slide + direction) % photo._embedded?.total;
     }
 
     setSlide(slideNumber);
-  }, [photo.length, slide]);
+  }, [photo._embedded?.total, slide]);
 
   const goToSlide = (number) => {
-    setSlide(number % photo.length);
+    setSlide(number % photo._embedded?.total);
   };
 
   const handleTouchStart = (e) => {
@@ -60,7 +63,7 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
     return () => {
       clearInterval(interval);
     };
-  }, [autoPlay, autoPlayTime, changeSlide, photo.length, slide]);
+  }, [autoPlay, autoPlayTime, changeSlide, photo._embedded?.total, slide]);
 
   return (
     <div
@@ -73,14 +76,14 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
         value={{
           goToSlide,
           changeSlide,
-          slidesCount: photo.length,
+          slidesCount: photo._embedded?.total,
           slideNumber: slide,
           photo,
         }}
       >
-        {/* <Arrows /> */}
+        <SliderArrow />
         <SliderItem/>
-        {/* <Dots /> */}
+        <SliderDots />
       </SliderContext.Provider>
     </div>
   );
@@ -97,7 +100,7 @@ Slider.defaultProps = {
   autoPlay: false,
   autoPlayTime: 5000,
   width: "100%",
-  height: "100%"
+  height: "860px"
 };
 
 export default Slider;

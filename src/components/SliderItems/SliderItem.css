@@ -1,0 +1,6 @@
+.slide-item {
+  display: flex;
+  height: 800px;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}

@@ -1,0 +1,15 @@
+.slider-dot {
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  min-height: 10px;
+  margin: 5px;
+  width: 10px;
+}
+
+.slider-dot:hover {
+  cursor: pointer;
+}
+
+.slider-dot_selected {
+  background-color: #000;
+}

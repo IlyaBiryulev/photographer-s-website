@@ -8,18 +8,9 @@ function SliderItem() {
 
   return (
     <div
-      className="slide-list"
+      className="slide-item"
       style={{ transform: `translateX(-${slideNumber * 100}%)`}}
     >
-      {/* {photo._embedded?.items.map((card) =>
-        <div>
-          <img
-          src={card.file}
-          className="card__img"
-          alt={card.name}
-        />
-        </div>
-      )} */}
       {photo._embedded?.items.map((card) =>
         <SlideImg
           card = {card}
