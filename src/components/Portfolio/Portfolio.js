@@ -1,12 +1,9 @@
-/* import { useState, useEffect, useCallback } from "react"; */
-
 import './Portfolio.css'
 import Header from "../Header/Header";
 import PhotoCards from '../PhotoCards/PhotoCards'
-import ImagePopup from '../ImagePopup/ImagePopup';
 
-console.log()
-function Portfolio({ folder, photo }) {
+function Portfolio({ folder, photo, onClick }) {
+
   return (
     <div>
       <div className="header_dark-theme">
@@ -20,7 +17,7 @@ function Portfolio({ folder, photo }) {
           и&nbsp;наслаждения на&nbsp;всю жизнь&quot;.&mdash;
           Тони Бенн
         </p>
-        <div className="portfolio__cards">
+        <div className="portfolio__cards" onClick={onClick}>
           {folder._embedded?.items.map((cards) =>
             <PhotoCards
               cards = {cards}
@@ -30,9 +27,6 @@ function Portfolio({ folder, photo }) {
           )}
         </div>
       </main>
-      <ImagePopup
-        photo={photo}
-      />
     </div>
   );
 }

@@ -5,18 +5,28 @@ import Main from '../Main/Main';
 import Portfolio from '../Portfolio/Portfolio';
 import AboutMe from '../AboutMe/AboutMe';
 import Contacts from '../Contacts/Contacts';
-import * as api from '../../utils/Api'
+import * as api from '../../utils/Api';
+import Slider from '../Slider/Slider';
 
 function App() {
 
   const [folder, setFolder] = useState([]);
   const [cardPhoto, setCardPhoto] = useState([]);
+  const [ popupOpen, setIsPopupOpen] = useState(false);
+
+  const handlePopupOpen = () => {
+    if(!popupOpen) {
+      setIsPopupOpen(true)
+    } else {
+      setIsPopupOpen(false)
+    }
+  }
 
   const getPhotoCard = useCallback(
     async () => {
       /* const folderName = folder._embedded?.items.map((function(i){return i.name})).find(function(value, index){return value[index]}) */
       try {
-        const data = await api.getPhotoCard('test')
+        const data = await api.getPhotoCard('testtwo')
         if (data) {
           console.log(data)
           setCardPhoto(data)
@@ -59,6 +69,8 @@ function App() {
             <Portfolio
               photo = {cardPhoto}
               folder = {folder}
+              isOpen = {popupOpen}
+              onClick = {handlePopupOpen}
             />
           }
         />
@@ -73,6 +85,9 @@ function App() {
           }
         />
       </Routes>
+      <Slider
+        photo = {cardPhoto}
+      />
     </div>
   );
 }
