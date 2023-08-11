@@ -6,8 +6,6 @@ import SliderDot from "../SliderDot/SliderDot";
 function SliderDots() {
   const { slidesCount } = useContext(SliderContext);
 
-  console.log(slidesCount)
-
   const renderDots = () => {
     const dots = [];
     for (let i = 0; i < slidesCount; i++) {

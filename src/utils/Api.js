@@ -3,7 +3,7 @@ const PUBLIC_KEY = 'https://disk.yandex.ru/d/wZNmHiZTHgpR3Q'
 
 const cardParams = {
   public_key: PUBLIC_KEY,
-  path: '/photo/test',
+  path: '/photo/testtwo',
   fields: ['_embedded']
 }
 

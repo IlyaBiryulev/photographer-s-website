@@ -100,7 +100,7 @@ Slider.defaultProps = {
   autoPlay: false,
   autoPlayTime: 5000,
   width: "100%",
-  height: "860px"
+  height: "100%"
 };
 
 export default Slider;

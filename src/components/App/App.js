@@ -6,7 +6,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import AboutMe from '../AboutMe/AboutMe';
 import Contacts from '../Contacts/Contacts';
 import * as api from '../../utils/Api';
-import Slider from '../Slider/Slider';
+import ImgModal from '../ImgModal/ImgModal';
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
     async () => {
       /* const folderName = folder._embedded?.items.map((function(i){return i.name})).find(function(value, index){return value[index]}) */
       try {
-        const data = await api.getPhotoCard('testtwo')
+        const data = await api.getPhotoCard()
         if (data) {
           console.log(data)
           setCardPhoto(data)
@@ -69,7 +69,6 @@ function App() {
             <Portfolio
               photo = {cardPhoto}
               folder = {folder}
-              isOpen = {popupOpen}
               onClick = {handlePopupOpen}
             />
           }
@@ -85,8 +84,10 @@ function App() {
           }
         />
       </Routes>
-      <Slider
+      <ImgModal
+        isOpen = {popupOpen}
         photo = {cardPhoto}
+        onClick = {handlePopupOpen}
       />
     </div>
   );
