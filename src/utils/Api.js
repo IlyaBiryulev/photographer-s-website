@@ -11,7 +11,7 @@ const folderParams = {
   public_key: "https://disk.yandex.ru/d/wZNmHiZTHgpR3Q",
   path: '/photo',
   offset: 0,
-  limit: 6,
+  limit: 9,
   fields: ['_embedded']
 }
 
