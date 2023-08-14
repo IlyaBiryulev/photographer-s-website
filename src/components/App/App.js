@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css'
-import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Portfolio from '../Portfolio/Portfolio';
 import AboutMe from '../AboutMe/AboutMe';
@@ -15,21 +14,12 @@ function App() {
   const [folder, setFolder] = useState([]);
   const [cardPhoto, setCardPhoto] = useState([]);
   const [ popupOpen, setIsPopupOpen] = useState(false);
-  const [burgerClick, setBurgerClick] = useState(false);
 
   const handlePopupOpen = () => {
     if(!popupOpen) {
       setIsPopupOpen(true)
     } else {
       setIsPopupOpen(false)
-    }
-  }
-
-  const handleBurgerClick = () => {
-    if(!burgerClick) {
-      setBurgerClick(true)
-    } else {
-      setBurgerClick(false)
     }
   }
 
