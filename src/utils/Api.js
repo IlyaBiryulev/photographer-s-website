@@ -8,7 +8,7 @@ const cardParams = {
 }
 
 const folderParams = {
-  public_key: "https://disk.yandex.ru/d/wZNmHiZTHgpR3Q",
+  public_key: PUBLIC_KEY,
   path: '/photo',
   offset: 0,
   limit: 9,

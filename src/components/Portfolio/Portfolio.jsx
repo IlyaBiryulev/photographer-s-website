@@ -1,14 +1,11 @@
-import './Portfolio.css'
-import Header from "../Header/Header";
-import PhotoCards from '../PhotoCards/PhotoCards'
-
+import './Portfolio.css';
+import Header from '../Header/Header';
+import PhotoCards from '../PhotoCards/PhotoCards';
 function Portfolio({ folder, photo, onClick }) {
 
   return (
     <div>
-      <div className="header_dark-theme">
-        <Header />
-      </div>
+      <Header />
       <main className="portfolio">
         <p className="portfolio__quote">
           &quot;Большинство вещей в&nbsp;жизни&nbsp;&mdash;

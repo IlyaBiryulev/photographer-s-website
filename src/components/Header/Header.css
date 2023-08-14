@@ -27,12 +27,6 @@
   margin-left: 10px;
 }
 
-.header__menu {
-  max-width: 420px;
-  height: 20px;
-  margin: 21px 0 10px;
-}
-
 .header__menu-link {
   color: #fff;
   text-decoration: none;
@@ -44,4 +38,85 @@
 
 .header__menu-link_active {
   text-decoration: underline;
+}
+
+.header__burger-btn .header__checkbox {
+  position: absolute;
+  display: none;
+  height: 32px;
+  width: 32px;
+  top: 15px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.header__burger-btn .header__burger-lines {
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  z-index: 2;
+  /* display: none; */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header__burger-btn .header__burger-lines .header__burger-line {
+  display: none;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+
+.header__burger-btn .header__burger-lines .header__burger-line_first {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.header__burger-btn .header__burger-lines .header__burger-line_second {
+  transition: transform 0.2s ease-in-out;
+}
+
+.header__burger-btn .header__burger-lines .header__burger-line_third {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.header__burger-btn input[type="checkbox"]:checked ~ .header__burger-lines .header__burger-line_first {
+  transform: rotate(45deg);
+}
+
+.header__burger-btn input[type="checkbox"]:checked ~ .header__burger-lines .header__burger-line_second {
+  transform: scaleY(0);
+}
+
+.header__burger-btn input[type="checkbox"]:checked ~ .header__burger-lines .header__burger-line_third {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 607px) {
+  .header__navbar {
+   display: none;
+  }
+
+  .header__burger-btn .header__checkbox {
+    display: block;
+  }
+
+  .header__burger-btn .header__burger-lines {
+    display: flex;
+  }
+
+  .header__burger-btn .header__burger-lines .header__burger-line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fff;
+  }
 }

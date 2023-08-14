@@ -1,12 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css'
+import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Portfolio from '../Portfolio/Portfolio';
 import AboutMe from '../AboutMe/AboutMe';
 import Contacts from '../Contacts/Contacts';
 import * as api from '../../utils/Api';
 import ImgModal from '../ImgModal/ImgModal';
+
 
 function App() {
 

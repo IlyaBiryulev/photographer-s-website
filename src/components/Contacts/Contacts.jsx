@@ -1,5 +1,5 @@
-import './Contacts.css'
-import Header from "../Header/Header";
+import './Contacts.css';
+import Header from '../Header/Header';
 
 function Contacts() {
   return (

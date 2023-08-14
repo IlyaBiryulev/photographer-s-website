@@ -20,6 +20,11 @@
   padding-right: 20px;
 }
 
+.navbar__menu-link:hover {
+  opacity: .9;
+  text-decoration: underline;
+}
+
 .navbar__menu-link_active {
   text-decoration: underline;
 }
