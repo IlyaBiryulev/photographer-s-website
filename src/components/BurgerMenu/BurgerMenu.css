@@ -1,10 +1,28 @@
 .burger-menu {
-
+  visibility: hidden;
+  width: 520px;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  right: -520px;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 23px 23px 92px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, .8);
+  transition: right 0.6s, visibility 0.6s;
 }
 
-.burger-menu__btn {
-  background-image: url(../../image/burgerBtn.png);
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
+.burger-menu_active {
+  right: 0;
+  visibility: visible;
+}
+
+@media screen and (max-width: 520px) {
+  .burger-menu {
+    width: 320px;
+    padding: 13px 13px 48px;
+  }
 }

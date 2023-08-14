@@ -15,12 +15,21 @@ function App() {
   const [folder, setFolder] = useState([]);
   const [cardPhoto, setCardPhoto] = useState([]);
   const [ popupOpen, setIsPopupOpen] = useState(false);
+  const [burgerClick, setBurgerClick] = useState(false);
 
   const handlePopupOpen = () => {
     if(!popupOpen) {
       setIsPopupOpen(true)
     } else {
       setIsPopupOpen(false)
+    }
+  }
+
+  const handleBurgerClick = () => {
+    if(!burgerClick) {
+      setBurgerClick(true)
+    } else {
+      setBurgerClick(false)
     }
   }
 

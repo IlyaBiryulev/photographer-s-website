@@ -1,8 +1,9 @@
 .main {
   min-height: 100vh;
   position: relative;
-  background-image: url(../../image/backimg2.png);
+  background-image: url(../../image/DSCF5132.jpg);
   background-position: center;
+  background-size: cover;
 }
 
 .main__quote {
@@ -17,3 +18,5 @@
   font-weight: 400;
   line-height: 29px;
 }
+
+
