@@ -19,4 +19,10 @@
   line-height: 29px;
 }
 
+@media screen and (max-width: 607px) {
+  .main {
+    background-position: 35%;
+  }
+}
+
 

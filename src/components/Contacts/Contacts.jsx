@@ -14,8 +14,6 @@ function Contacts() {
           <li><a href="2" className="contacts__link">INSTAGRAM</a></li>
           <li><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=birulevila@gmail.com" className="contacts__link">GMAIL</a></li>
         </ul>
-        <p className="contacts__form-title">Или пиши через форму</p>
-        <div className="contacts__form-btn"></div>
         <p className="contacts__quote">&laquo;На&nbsp;каждой фотографии всегда есть два человека: фотограф и&nbsp;зритель&raquo;.&mdash; Ансель Адамс</p>
       </main>
     </div>

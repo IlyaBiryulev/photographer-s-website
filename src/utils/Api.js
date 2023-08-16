@@ -1,28 +1,56 @@
+/* import axios from "axios"; */
+
+import axios from "axios";
+
 const BASE_URL = "https://cloud-api.yandex.net/v1/disk/public/resources?";
-const PUBLIC_KEY = 'https://disk.yandex.ru/d/wZNmHiZTHgpR3Q'
+const PUBLIC_KEY = 'https://disk.yandex.ru/d/wZNmHiZTHgpR3Q';
 
-const cardParams = {
-  public_key: PUBLIC_KEY,
-  path: '/photo/testtwo',
-  fields: ['_embedded']
+export async function getPhotoCards(paths) {
+  const responseArray = [];
+
+  for (const path of paths) {
+    try {
+      const response = await axios.get(`${BASE_URL}`, {
+        params: {
+          public_key: PUBLIC_KEY,
+          path: path,
+          fields: ['_embedded']
+        }
+      });
+
+      responseArray.push(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  return responseArray;
 }
 
-const folderParams = {
-  public_key: PUBLIC_KEY,
-  path: '/photo',
-  offset: 0,
-  limit: 9,
-  fields: ['_embedded']
+export async function getFolder(page = 1) {
+  const responce = await axios.get(`${BASE_URL}`, {
+    params: {
+      public_key: PUBLIC_KEY,
+      path: '/photo',
+      offset: 0,
+      /* limit: limit, */
+      page: page,
+      fields: ['_embedded']
+    }
+  })
+  return responce;
 }
 
-const cParams = new URLSearchParams(cardParams).toString();
-const fParams = new URLSearchParams(folderParams).toString();
-
-export function getPhotoCard() {
+/* export function getPhotoCard() {
   const url = BASE_URL + cParams;
-  return fetch(`${url}`, {
+  return fetch(`${BASE_URL}`, {
     method: "GET",
     headers: {"Content-Type": "application/json"},
+    params: {
+      public_key: PUBLIC_KEY,
+      path: '/photo/testtwo',
+      fields: ['_embedded']
+    }
   }).then((res) => {
     return res.ok
       ? res.json()
@@ -32,7 +60,7 @@ export function getPhotoCard() {
 
 export function getFolder() {
   const url = BASE_URL + fParams;
-  return fetch(`${url}`, {
+  return fetch(`${BASE_URL}`, {
     method: "GET",
     headers: {"Content-Type": "application/json"},
   }).then((res) => {
@@ -40,7 +68,7 @@ export function getFolder() {
       ? res.json()
       : Promise.reject(`Ошибка: ${res.status} ${res.statusText}`);
   });
-}
+} */
 
 /* const makeRequest = (path, method, params, body) => {
   const headers = { "Content-Type": "application/json" };

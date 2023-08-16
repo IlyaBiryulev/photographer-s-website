@@ -61,20 +61,6 @@
   margin-right: 0;
 }
 
-.contacts__form-title {
-  margin: 0 0 21px;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 29px;
-  color: #fff;
-}
-
-.contacts__form-btn {
-  width: 150px;
-  height: 50px;
-  background-image: url(../../image/ContactFormButton.png);
-}
-
 .contacts__form-btn:hover {
   cursor: pointer;
   transition: 0.4s;
@@ -91,5 +77,12 @@
   max-width: 825px;
   text-align: center;
 }
+
+@media screen and (max-width: 607px) {
+  .contacts {
+    background-position: 47%;
+  }
+}
+
 
 
