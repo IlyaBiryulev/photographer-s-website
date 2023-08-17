@@ -16,16 +16,16 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
     let slideNumber = 0;
 
     if (slide + direction < 0) {
-      slideNumber = photo._embedded?.limit - 1;
+      slideNumber = photo._embedded?.items.length - 1;
     } else {
-      slideNumber = (slide + direction) % photo._embedded?.limit;
+      slideNumber = (slide + direction) % photo._embedded?.items.length;
     }
 
     setSlide(slideNumber);
-  }, [photo._embedded?.limit, slide]);
+  }, [photo._embedded?.items.length, slide]);
 
   const goToSlide = (number) => {
-    setSlide(number % photo._embedded?.total);
+    setSlide(number % photo._embedded?.items.length);
   };
 
   const handleTouchStart = (e) => {
@@ -63,7 +63,7 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
     return () => {
       clearInterval(interval);
     };
-  }, [autoPlay, autoPlayTime, changeSlide, photo._embedded?.limit, slide]);
+  }, [autoPlay, autoPlayTime, changeSlide, photo._embedded?.items.length, slide]);
 
   return (
     <div
@@ -76,7 +76,7 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
         value={{
           goToSlide,
           changeSlide,
-          slidesCount: photo._embedded?.limit,
+          slidesCount: photo._embedded?.items.length,
           slideNumber: slide,
           photo,
         }}
