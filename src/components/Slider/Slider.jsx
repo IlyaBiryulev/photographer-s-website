@@ -16,13 +16,13 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
     let slideNumber = 0;
 
     if (slide + direction < 0) {
-      slideNumber = photo._embedded?.total - 1;
+      slideNumber = photo._embedded?.limit - 1;
     } else {
-      slideNumber = (slide + direction) % photo._embedded?.total;
+      slideNumber = (slide + direction) % photo._embedded?.limit;
     }
 
     setSlide(slideNumber);
-  }, [photo._embedded?.total, slide]);
+  }, [photo._embedded?.limit, slide]);
 
   const goToSlide = (number) => {
     setSlide(number % photo._embedded?.total);
@@ -63,7 +63,7 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
     return () => {
       clearInterval(interval);
     };
-  }, [autoPlay, autoPlayTime, changeSlide, photo._embedded?.total, slide]);
+  }, [autoPlay, autoPlayTime, changeSlide, photo._embedded?.limit, slide]);
 
   return (
     <div
@@ -76,7 +76,7 @@ function Slider({photo, width, height, autoPlay, autoPlayTime}) {
         value={{
           goToSlide,
           changeSlide,
-          slidesCount: photo._embedded?.total,
+          slidesCount: photo._embedded?.limit,
           slideNumber: slide,
           photo,
         }}

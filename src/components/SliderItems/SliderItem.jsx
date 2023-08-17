@@ -11,7 +11,7 @@ function SliderItem() {
       className="slide-item"
       style={{ transform: `translateX(-${slideNumber * 100}%)`}}
     >
-      {photo._embedded?.items.map((card) =>
+      {photo._embedded.items.map((card) =>
         <SlideImg
           card = {card}
           key = {card.resource_id}

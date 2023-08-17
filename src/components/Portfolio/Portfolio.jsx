@@ -1,7 +1,14 @@
 import './Portfolio.css';
+import React, { useState } from 'react';
 import Header from '../Header/Header';
 import PhotoCards from '../PhotoCards/PhotoCards';
-function Portfolio({ folder, photo, onClick, pagesArray, changePage }) {
+import ImgModal from '../ImgModal/ImgModal';
+function Portfolio({ photo, onClick, isOpen}) {
+  const [ selectedPhoto, setSelectedPhoto ] = useState(null);
+
+  const handleCardClick = (card) => {
+    setSelectedPhoto(card);
+  }
 
   return (
     <div>
@@ -18,25 +25,19 @@ function Portfolio({ folder, photo, onClick, pagesArray, changePage }) {
           {photo.map((p) =>
             <PhotoCards
               card = {p}
-              key={p}
+              key={p.name}
+              onPhotoClick={handleCardClick}
             />
           )}
-          {/* <div>
-              <img
-              className='card__img '
-              src={p._embedded.items[0].file}
-              alt=""
-            />
-            <p>{p.name}</p>
-            </div> */}
-
         </div>
-        {/* <div>
-          {pagesArray.map((p) =>
-            <button key={p} onClick={() => changePage(p)}>{p}</button>
-          )}
-        </div> */}
       </main>
+      { selectedPhoto !== null &&
+        <ImgModal
+        isOpen={isOpen}
+        photo={selectedPhoto}
+        onClick={onClick}
+      />
+      }
     </div>
   );
 }

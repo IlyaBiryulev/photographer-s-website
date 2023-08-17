@@ -1,15 +1,19 @@
 import './PhotoCards.css'
-import React, { useEffect, useState, useCallback } from 'react';
 
-function PhotoCards({ card }) {
-  /* console.log(cards) */
+function PhotoCards({ card, onPhotoClick }) {
+
+  function handleClick() {
+    onPhotoClick(card);
+  }
+
   return (
     <div className='card__wrapper'>
       <div className="card">
       <img
         className='card__img '
         src={card._embedded.items[0].file}
-        alt=""
+        alt={card._embedded.items[0].name}
+        onClick = {handleClick}
       />
       </div>
       <h1 className='card__title'>{card.name}</h1>
