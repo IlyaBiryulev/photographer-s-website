@@ -14,13 +14,16 @@ function Portfolio({ photo, onClick, isOpen}) {
     <div>
       <Header />
       <main className="portfolio">
-        <p className="portfolio__quote">
-          &laquo;Большинство вещей в&nbsp;жизни&nbsp;&mdash;
-          это моменты удовольствия и&nbsp;смущения на&nbsp;
-          всю жизнь. Фотография&nbsp;&mdash; это момент смущения
-          и&nbsp;наслаждения на&nbsp;всю жизнь&raquo;.&mdash;
-          Тони Бенн
-        </p>
+        <div className='portfolio__wrapper'>
+          <a href='https://360.yandex.ru/disk/' className='portfolio__link'><div className='yandex-logo'></div></a>
+          <p className="portfolio__quote">
+            &laquo;Большинство вещей в&nbsp;жизни&nbsp;&mdash;
+            это моменты удовольствия и&nbsp;смущения на&nbsp;
+            всю жизнь. Фотография&nbsp;&mdash; это момент смущения
+            и&nbsp;наслаждения на&nbsp;всю жизнь&raquo;.&mdash;
+            Тони Бенн
+          </p>
+        </div>
         <div className="portfolio__cards" onClick={onClick}>
           {photo.map((p) =>
             <PhotoCards
