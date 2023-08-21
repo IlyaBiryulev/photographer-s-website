@@ -1,4 +1,4 @@
-import './PhotoCards.css'
+import './PhotoCards.css';
 
 function PhotoCards({ card, onPhotoClick }) {
 
@@ -7,14 +7,14 @@ function PhotoCards({ card, onPhotoClick }) {
   }
 
   return (
-    <div className='card__wrapper'>
-      <div className="card">
-      <img
-        className='card__img '
-        src={card._embedded.items[0].file}
-        alt={card._embedded.items[0].name}
-        onClick = {handleClick}
-      />
+    <div className='card'>
+      <div className="card__img-wrapper">
+        <img
+          className='card__img '
+          src={card._embedded.items[0].sizes[8].url}
+          alt={card._embedded.items[0].name}
+          onClick = {handleClick}
+        />
       </div>
       <h1 className='card__title'>{card.name}</h1>
     </div>

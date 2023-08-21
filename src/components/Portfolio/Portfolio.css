@@ -1,9 +1,9 @@
 .portfolio {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0 27px;
+  padding: 15px 0 27px;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 .portfolio__wrapper {
@@ -15,7 +15,7 @@
 
 .portfolio__quote {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 29px;
   max-width: 900px;
   text-align: center;

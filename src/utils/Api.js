@@ -19,15 +19,13 @@ export async function getPhotoCards(path) {
   }
 }
 
-export async function getFolder(limit, page) {
+export async function getFolder(limit) {
   try {
     const responce = await axios.get(`${BASE_URL}`, {
       params: {
         public_key: PUBLIC_KEY,
         path: '/photo',
-        offset: 0,
         limit: limit,
-        page: page,
         fields: ['_embedded']
       }
     })

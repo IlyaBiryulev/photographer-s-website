@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import Header from '../Header/Header';
 import PhotoCards from '../PhotoCards/PhotoCards';
 import ImgModal from '../ImgModal/ImgModal';
-function Portfolio({ photo, onClick, isOpen}) {
+import Preloader from '../Preloader/Preloader';
+function Portfolio({ photo, onClick, isOpen, isLoading, showMore}) {
   const [ selectedPhoto, setSelectedPhoto ] = useState(null);
 
   const handleCardClick = (card) => {
@@ -24,15 +25,18 @@ function Portfolio({ photo, onClick, isOpen}) {
             Тони Бенн
           </p>
         </div>
-        <div className="portfolio__cards" onClick={onClick}>
+        {isLoading && <Preloader/>}
+        {!isLoading && <div className="portfolio__cards" onClick={onClick}>
           {photo.map((p) =>
             <PhotoCards
               card = {p}
               key={p.name}
               onPhotoClick={handleCardClick}
+              isLoading = {isLoading}
             />
           )}
-        </div>
+        </div>}
+        {/* <button className='portfolio__show-more' onClick={showMore}>Показать еще</button> */}
       </main>
       { selectedPhoto !== null &&
         <ImgModal
