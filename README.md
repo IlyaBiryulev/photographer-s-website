@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Проект: Сайт-портфолио для фотографа(проект находится на стадии разработки)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- проект разрабатывается как собстевнный pet-проект с целью изучения новых технологий и закрепления навыков frontend разработки.
 
-## Available Scripts
+## Содержание
 
-In the project directory, you can run:
+ - [Обзор проекта](#обзор-проекта)
+    - [Задачи и цели](#задачи-и-цели-проекта)
+    - [Функциональность проекта](#функциональность-проекта)
+    - [Будущие улучшения](#будущие-улучшения)
+    - [Ссылки](#ссылки)
+    - [Директории проекта](#директории-проекта)
+    - [Запуск прокета](#запуск-проекта)
+ - [Технологии](#технологии)
+ - [Автор](#автор)
 
-### `npm start`
+## Обзор проекта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Задачи и цели проекта
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Задачи проекта включают в себя интеграция в проект хранилища для хранения данных(хранение фотографий с возможностью обновления в реальном времени), закреплений навыков в верстке и создания SPA страниц, изучение технологий и добавления различного функционала в работу.
+К целям проекта относятся создание сайта для фотографа, верстка с помощью созданного макета в Figma, написание функционала приложения, подключение api хранилища с фотографиями.
 
-### `npm test`
+### Функциональность проекта
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Проект представляет полноценный сайт для фотографа, на данный момент реализовано 4 страницы (главная/портфолио/о себе/контакты). В дальнейшем планируется добавить страницы с услагами и ценами, а также страницу "Блог", в которой будет реализована лента с фотографиями/статьями от фотографа.
+В работе подключено api с хранилищем фотосессий(разбыты по папкам), для пополнения портфолио автору достаточно залить папку с фотографиями на диск и содержимое сразу отобразиться на сайте.
 
-### `npm run build`
+![Desktop screenshot](./screenshots/Portfolio.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Реализован слайдер для просмотра всех фотографий с отдельной фотосессии
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Desktop screenshot](./screenshots/Slider.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Будущие улучшения
 
-### `npm run eject`
+В проект планируется добавить:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - страницу с услугами фотографа
+  - кнопку "Ещё" на странице портфолио
+  - прелоудер
+  - анимации для страниц и отдельных элементов
+  - форма для записи клиентов на фотосессию
+  - оптимизацию сайта для быстродействия
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Ссылки
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[Ссылка на страницу сайта]()
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Ссылка на проект](https://github.com/IlyaBiryulev/photographer-s-website)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Директории проекта
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/components` — компоненты проекта
+- `src/contexts` — элементами контекста
+- `src/utils` — директория с api, константами и вспомогательными функциями проекта
+- `src/image` — изображения
+- `src/vendor` — директория с файлами библиотек
+- `/fonts` — директория со шрифтами
 
-### Code Splitting
+### Запуск проекта
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `npm run build` — запуск проекта в режиме продакшн
+- `npm start` — запуск проекта в режиме разработки
 
-### Analyzing the Bundle Size
+## Технологии
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- HTML
+- CSS
+- JS
+- React
+- React Router
+- Create React App
+- Axios
+- Адаптивная вёрстка
+- Семантическая вёрстка
 
-### Making a Progressive Web App
+## Автор
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Илья Бирюлев
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- e-mail: birulevila@gmail.com
+- tg: [@ilya_bir](https://t.me/ilya_bir)
