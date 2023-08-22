@@ -59,7 +59,6 @@
   top: 12px;
   right: 20px;
   z-index: 4;
-  /* display: none; */
   flex-direction: column;
   justify-content: space-between;
 }

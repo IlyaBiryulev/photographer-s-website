@@ -20,6 +20,7 @@ const desktopScreenWidth = 1280;
 const padScreenWidth = 768;
 const mobileScreenWidth = 320;
 
+const ESC_KEY = "Escape";
 
 export {
   BASE_URL,
@@ -27,5 +28,6 @@ export {
   initialPhoto,
   desktopScreenWidth,
   padScreenWidth,
-  mobileScreenWidth
+  mobileScreenWidth,
+  ESC_KEY
 }
