@@ -30,6 +30,21 @@
   margin: 0 20px;
 }
 
+.portfolio__show-more {
+  background-color: transparent;
+  border: 1px solid #000;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all .25s ease;
+  margin-top: 10px;
+}
+
+.portfolio__show-more:hover {
+  opacity: .7;
+  transform: scale(.9);
+}
+
 .yandex-logo {
   background-image: url(../../image/yandex_disk_icons.png);
   background-repeat: no-repeat;

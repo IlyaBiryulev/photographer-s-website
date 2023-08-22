@@ -1,7 +1,7 @@
-import './BurgerMenu.css'
+import './BurgerMenu.css';
 
 import Overlay from '../Overlay/Overlay';
-import NavBar from '../NavBar/NavBar'
+import NavBar from '../NavBar/NavBar';
 
 function BurgerMenu({isOpen}) {
   return (

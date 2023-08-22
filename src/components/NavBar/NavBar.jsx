@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css'
+import './NavBar.css';
 import { NavLink, useLocation } from 'react-router-dom';
 
 function NavBar () {

@@ -7,36 +7,28 @@ import AboutMe from '../AboutMe/AboutMe';
 import Contacts from '../Contacts/Contacts';
 import * as api from '../../utils/Api';
 
-const initailLimit = 8;
-
 
 function App() {
   const [ cardPhoto, setCardPhoto] = useState([]);
   const [ popupOpen, setIsPopupOpen] = useState(false);
-  const [ limit, setLimit] = useState(initailLimit);
   const [ folder, setFolder] = useState([]);
   const [ loading, setLoading] = useState(false);
 
   useEffect(() => {
-    Promise.all([api.getFolder(limit,)])
+    Promise.all([api.getFolder()])
     .then((values) => {
-      setFolder(values[0].data._embedded)
+      setFolder(values[0].data._embedded);
     })
     .catch((err) => {
       console.log(err);
     });
-  },[limit,])
+  },[])
 
-  /* const handleShowMore = () => {
-    const showMore = limit + 4
-    setLimit(showMore)
-  }
- */
   const handlePopupOpen = () => {
     if(!popupOpen) {
-      setIsPopupOpen(true)
+      setIsPopupOpen(true);
     } else {
-      setIsPopupOpen(false)
+      setIsPopupOpen(false);
     }
   }
 
@@ -48,11 +40,11 @@ function App() {
           folder.items.map(
             item =>  api.getPhotoCards(item.path)
           )
-        )
+        );
         const cardPhoto = allItems.map((i) => i.data);
-        setCardPhoto(cardPhoto)
+        setCardPhoto(cardPhoto);
       } catch(err) {
-        console.log(err)
+        console.log(err);
       } finally {
         setLoading(false);
       }
@@ -60,7 +52,7 @@ function App() {
   );
 
   useEffect(() => {
-    getPhotoCard()
+    getPhotoCard();
   },[getPhotoCard])
 
   return (
@@ -74,11 +66,10 @@ function App() {
         <Route path='/portfolio'
           element={
             <Portfolio
-              photo = {cardPhoto}
+              photos = {cardPhoto}
               isOpen = {popupOpen}
               onClick = {handlePopupOpen}
               isLoading = {loading}
-              /* showMore = {handleShowMore} */
             />
           }
         />

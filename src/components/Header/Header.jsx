@@ -11,9 +11,9 @@ function Header() {
 
   const handleBurgerClick = () => {
     if(!isBurgerClick) {
-      setBurgerClick(true)
+      setBurgerClick(true);
     } else {
-      setBurgerClick(false)
+      setBurgerClick(false);
     }
   }
 
@@ -25,7 +25,7 @@ function Header() {
       return('header');
     }
     if (location.pathname === '/portfolio' || '/about-me') {
-      return ('header header_dark-theme')
+      return ('header header_dark-theme');
     }
   }
 

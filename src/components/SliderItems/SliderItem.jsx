@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import './SliderItem.css'
-import { SliderContext} from '../Slider/Slider'
+import './SliderItem.css';
+import { SliderContext} from '../Slider/Slider';
 import SlideImg from "../SlideImg/SlideImg";
 
 function SliderItem() {

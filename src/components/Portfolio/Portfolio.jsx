@@ -1,14 +1,61 @@
 import './Portfolio.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import PhotoCards from '../PhotoCards/PhotoCards';
 import ImgModal from '../ImgModal/ImgModal';
 import Preloader from '../Preloader/Preloader';
-function Portfolio({ photo, onClick, isOpen, isLoading, showMore}) {
+import useResizeScreen from '../../utils/ResizeScreen';
+import {
+  desktopScreenWidth,
+  padScreenWidth,
+  mobileScreenWidth,
+  initialPhoto
+} from '../../utils/constants';
+
+function Portfolio({ photos, onClick, isOpen, isLoading}) {
+  const Screen = useResizeScreen();
+
   const [ selectedPhoto, setSelectedPhoto ] = useState(null);
+  const [ cardRender, setCardRender] = useState([]);
+  const [ photoCard, setPhotoCard] = useState([]);
+
+  useEffect(() => {
+    if (Screen === desktopScreenWidth) {
+      setCardRender(initialPhoto.desktop);
+    } else if (padScreenWidth <= Screen <= desktopScreenWidth) {
+      setCardRender(initialPhoto.desktop);
+    } else if (mobileScreenWidth <= Screen <= padScreenWidth) {
+      setCardRender(initialPhoto.pad);
+    } else if (Screen === mobileScreenWidth ) {
+      setCardRender(initialPhoto.mobile);
+    }
+  }, [Screen]);
+
+  useEffect(() => {
+      const photoList = photos.filter((photo, item) => {
+        return item < cardRender.photo;
+      });
+      setPhotoCard(photoList);
+  }, [cardRender, photos]);
 
   const handleCardClick = (card) => {
     setSelectedPhoto(card);
+  }
+
+  const handleShowMore = () => {
+    const initialMoviesCount =  photoCard.length;
+    const MoviesToShow = initialMoviesCount + cardRender.more;
+    const moviesCount = photos.length -  initialMoviesCount;
+    if ( moviesCount > 0) {
+      const movieElement = photos.slice(initialMoviesCount, MoviesToShow);
+      setPhotoCard([...photoCard, ...movieElement]);
+    }
+  };
+
+  const ifShowMore = () => {
+    if ( photos.length >= 5 && photoCard.length < photos.length) {
+      return(<button className='portfolio__show-more' onClick={handleShowMore}>Показать больше</button>)
+    }
   }
 
   return (
@@ -27,7 +74,7 @@ function Portfolio({ photo, onClick, isOpen, isLoading, showMore}) {
         </div>
         {isLoading && <Preloader/>}
         {!isLoading && <div className="portfolio__cards" onClick={onClick}>
-          {photo.map((p) =>
+          {photoCard.map((p) =>
             <PhotoCards
               card = {p}
               key={p.name}
@@ -36,7 +83,7 @@ function Portfolio({ photo, onClick, isOpen, isLoading, showMore}) {
             />
           )}
         </div>}
-        {/* <button className='portfolio__show-more' onClick={showMore}>Показать еще</button> */}
+        {ifShowMore()}
       </main>
       { selectedPhoto !== null &&
         <ImgModal

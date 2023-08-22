@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { SliderContext } from "../Slider/Slider";
-import './SliderArrow.css'
+import './SliderArrow.css';
 
 
 function SliderArrow() {

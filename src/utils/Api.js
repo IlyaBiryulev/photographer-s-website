@@ -1,7 +1,5 @@
 import axios from "axios";
-
-const BASE_URL = "https://cloud-api.yandex.net/v1/disk/public/resources?";
-const PUBLIC_KEY = 'https://disk.yandex.ru/d/wZNmHiZTHgpR3Q';
+import { BASE_URL, PUBLIC_KEY } from "./constants";
 
 export async function getPhotoCards(path) {
   try {
@@ -19,13 +17,12 @@ export async function getPhotoCards(path) {
   }
 }
 
-export async function getFolder(limit) {
+export async function getFolder() {
   try {
     const responce = await axios.get(`${BASE_URL}`, {
       params: {
         public_key: PUBLIC_KEY,
         path: '/photo',
-        limit: limit,
         fields: ['_embedded']
       }
     })
