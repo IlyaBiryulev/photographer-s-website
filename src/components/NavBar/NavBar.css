@@ -16,7 +16,14 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 19px;
+}
+
+.navbar__list-item {
   padding-right: 20px;
+}
+
+.navbar__list-item:last-child {
+  padding-right: 5px;
 }
 
 .navbar__menu-link:hover {

@@ -1,0 +1,25 @@
+.promo {
+  height: 100vh;
+  background-image: url(../../image/DSCF5132.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.promo__title {
+  color: #fff;
+  position: absolute;
+  margin: 0;
+  bottom: 10px;
+  left: 10px;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 55px;
+  font-style: oblique;
+}
+
+@media screen and (max-width: 607px) {
+  .promo {
+    background-position: 35%;
+  }
+}

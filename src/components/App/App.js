@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import Main from '../Main/Main';
 import Portfolio from '../Portfolio/Portfolio';
-import AboutMe from '../AboutMe/AboutMe';
+import Filming from '../Filming/Filming';
 import Contacts from '../Contacts/Contacts';
 import * as api from '../../utils/Api';
 
@@ -73,9 +73,9 @@ function App() {
             />
           }
         />
-        <Route path='/about-me'
+        <Route path='/filming'
           element={
-            <AboutMe />
+            <Filming />
           }
         />
         <Route path='/contacts'

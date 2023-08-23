@@ -1,13 +1,12 @@
 import './Main.css'
-import Header from "../Header/Header";
+import Promo from '../Promo/Promo';
+import About from '../About/About';
 
 function Main() {
   return (
-    <div>
-      <section className="main">
-        <Header />
-        <p className="main__quote">&laquo;Фотография&nbsp;&mdash; это история, которую я&nbsp;не&nbsp;могу выразить словами&raquo;.&mdash; Дестин Спаркс</p>
-      </section>
+    <div className='main'>
+      <Promo />
+      <About />
     </div>
   );
 }

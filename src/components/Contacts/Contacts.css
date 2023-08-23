@@ -1,8 +1,10 @@
 .contacts {
   background-image: url(../../image/backimg3.png);
-  height: 100vh;
   background-position: center;
+  height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
 }
+
 
 .contacts__content {
   display: flex;
@@ -69,7 +71,7 @@
 
 .contacts__quote {
   margin: 0;
-  padding-top: 345px;
+  padding-top: 331px;
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
