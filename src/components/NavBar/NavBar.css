@@ -20,10 +20,11 @@
 
 .navbar__list-item {
   padding-right: 20px;
+  z-index: 2;
 }
 
 .navbar__list-item:last-child {
-  padding-right: 5px;
+  padding-right: 10px;
 }
 
 .navbar__menu-link:hover {

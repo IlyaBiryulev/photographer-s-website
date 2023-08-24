@@ -11,6 +11,8 @@ import {
   mobileScreenWidth,
   initialPhoto
 } from '../../utils/constants';
+import { photoAnimation } from '../../utils/constants';
+import { motion} from 'framer-motion';
 
 function Portfolio({ photos, onClick, isOpen, isLoading}) {
   const Screen = useResizeScreen();
@@ -73,23 +75,31 @@ function Portfolio({ photos, onClick, isOpen, isLoading}) {
           </p>
         </div>
         {isLoading && <Preloader/>}
-        {!isLoading && <div className="portfolio__cards" onClick={onClick}>
-          {photoCard.map((p) =>
+        {!isLoading &&
+          <motion.div
+            className="portfolio__cards"
+            onClick={onClick}
+            initial='hidden'
+            whileInView='visible'
+          >
+          {photoCard.map((p, index) =>
             <PhotoCards
               card = {p}
               key={p.name}
               onPhotoClick={handleCardClick}
               isLoading = {isLoading}
+              custom={index + 1}
+              variants={photoAnimation}
             />
           )}
-        </div>}
+        </motion.div>}
         {ifShowMore()}
       </main>
       { selectedPhoto !== null &&
         <ImgModal
-        isOpen={isOpen}
-        photo={selectedPhoto}
-        onClick={onClick}
+          isOpen={isOpen}
+          photo={selectedPhoto}
+          onClick={onClick}
       />
       }
     </div>
