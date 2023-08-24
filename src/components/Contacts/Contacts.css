@@ -71,7 +71,8 @@
 
 .contacts__quote {
   margin: 0;
-  padding-top: 331px;
+  position: absolute;
+  bottom: 10px;
   font-size: 24px;
   font-weight: 400;
   line-height: 29px;
@@ -80,9 +81,40 @@
   text-align: center;
 }
 
+@media screen and (max-width: 780px) {
+  .contacts__list {
+    flex-direction: column;
+  }
+
+  .contacts__list-item {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .contacts__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 10px 0 20px;
+  }
+}
+
 @media screen and (max-width: 607px) {
   .contacts {
     background-position: 47%;
+  }
+
+  .contacts__title {
+    width: 250px;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 25px 0 10px;
+  }
+
+  .contacts__quote {
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
