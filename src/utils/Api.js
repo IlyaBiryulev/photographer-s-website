@@ -7,7 +7,6 @@ export async function getPhotoCards(path) {
       params: {
         public_key: PUBLIC_KEY,
         path: `${path}`,
-        limit: 17,
         fields: ['_embedded']
       }
     });

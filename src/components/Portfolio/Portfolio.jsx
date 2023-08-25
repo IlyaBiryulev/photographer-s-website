@@ -33,12 +33,17 @@ function Portfolio({ photos, onClick, isOpen, isLoading}) {
     }
   }, [Screen]);
 
+
+
   useEffect(() => {
-      const photoList = photos.filter((photo, item) => {
+      const sortedphotoList = photos.sort((a, b) => {
+        return new Date(b.modified) - new Date(a.modified);
+      });
+      const photoList = sortedphotoList.filter((photo, item) => {
         return item < cardRender.photo;
       });
       setPhotoCard(photoList);
-  }, [cardRender, photos]);
+  }, [cardRender, photos, setPhotoCard]);
 
   const handleCardClick = (card) => {
     setSelectedPhoto(card);
