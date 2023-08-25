@@ -17,7 +17,7 @@ function Contacts() {
         <motion.ul className="contacts__list" variants={textAnimation} custom={3}>
           <li className='contacts__list-item'><a href="https://vk.com/stormsi" className="contacts__link">ВКОНТАКТЕ</a></li>
           <li className='contacts__list-item'><a href="https://t.me/ilya_bir" className="contacts__link">TELEGRAM</a></li>
-          <li className='contacts__list-item'><a href="2" className="contacts__link">INSTAGRAM</a></li>
+          <li className='contacts__list-item'><a href="2" className="contacts__link">IG</a></li>
           <li className='contacts__list-item'><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=birulevila@gmail.com" className="contacts__link">GMAIL</a></li>
         </motion.ul>
         <p className="contacts__quote">&laquo;На&nbsp;каждой фотографии всегда есть два человека: фотограф и&nbsp;зритель&raquo;.&mdash; Ансель Адамс</p>
