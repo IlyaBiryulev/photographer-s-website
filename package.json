@@ -1,6 +1,7 @@
 {
   "name": "photographer-s-website",
   "version": "0.1.0",
+  "homepage": "https://ilyabiryulev.github.io/photographer-s-website/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
