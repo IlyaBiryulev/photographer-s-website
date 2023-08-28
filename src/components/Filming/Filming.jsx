@@ -6,7 +6,8 @@ function Filming() {
     <div>
       <Header />
       <div className="filming">
-    </div>
+        <h1>Страница в разработке</h1>
+      </div>
     </div>
   );
 }
