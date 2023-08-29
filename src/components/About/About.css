@@ -11,7 +11,7 @@
   margin: 30px 10px;
   display: grid;
   grid-template-columns: minmax(292px, 600px) 370px;
-  grid-template-rows: repeat(3, min-content) 1fr;
+  grid-template-rows: repeat(4, min-content) 1fr;
   column-gap: 50px;
   border-radius: 10px;
 }
@@ -32,6 +32,31 @@
   grid-area: 2 / 1 / 2 / 2;
   margin: 0;
   text-align: justify;
+}
+
+.about__link-btn {
+  width: 131px;
+  height: 50px;
+  background: transparent;
+  padding: 13px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: all .25s;
+  align-self: end;
+}
+
+.about__link {
+  color: #000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about__link-btn:hover {
+  border: 2px solid #080E73;
+  opacity: .8;
+  transform: scale(.95);
 }
 
 .about__img {

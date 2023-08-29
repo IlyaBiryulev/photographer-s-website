@@ -1,4 +1,5 @@
 import './About.css';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import photo from '../../image/cb1nOsuHEHE.jpg';
 import { textAnimation } from '../../utils/constants';
@@ -18,7 +19,9 @@ function About({ onRef }) {
           Моя работа — это путешествие в мир визуальных возможностей, в поисках идеального ракурса и игры света.
           За эти годы я преодолел множество творческих барьеров, развивал свой стиль и подход к съемке.
           Мне важно не только создавать красивые фотографии, но и передавать настроение, эмоции, искренность.
-          Я верю, что именно эти аспекты делают каждое фото неповторимым и ценным.</motion.p>
+          Я верю, что именно эти аспекты делают каждое фото неповторимым и ценным.
+        </motion.p>
+        <button className='about__link-btn'><Link variants={textAnimation} custom={3} to="/portfolio" className='about__link'>ПОРТФОЛИО</Link></button>
         <motion.img src={photo} alt='Фотография автора' className='about__img' variants={textAnimation} custom={3}></motion.img>
       </article>
     </motion.section>
