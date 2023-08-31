@@ -12,7 +12,7 @@ import {
   initialPhoto
 } from '../../utils/constants';
 import { photoAnimation } from '../../utils/constants';
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function Portfolio({ photos, onClick, isOpen, isLoading}) {
   const Screen = useResizeScreen();

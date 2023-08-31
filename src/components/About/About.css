@@ -35,28 +35,26 @@
 }
 
 .about__link-btn {
-  width: 131px;
-  height: 50px;
+  width: 110px;
+  height: 30px;
   background: transparent;
-  padding: 13px;
+  padding: 3px;
   border-radius: 10px;
   border: 2px solid #000;
   cursor: pointer;
-  transition: all .25s;
+  transition: all .25s ease;
   align-self: end;
 }
 
 .about__link {
-  color: #000;
+  color: #808080;
   text-decoration: none;
   font-size: 13px;
   font-weight: 600;
 }
 
 .about__link-btn:hover {
-  border: 2px solid #080E73;
-  opacity: .8;
-  transform: scale(.95);
+  border: 2px solid #00154D;
 }
 
 .about__img {

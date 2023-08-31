@@ -13,8 +13,8 @@
 }
 
 .portfolio__quote {
-  font-weight: 400;
-  font-size: 17px;
+  font-weight: 600;
+  font-size: 15px;
   line-height: 29px;
   max-width: 900px;
   text-align: center;
@@ -31,9 +31,9 @@
 
 .portfolio__show-more {
   background-color: transparent;
-  border: 1px solid #000;
+  border: none;
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 600;
   cursor: pointer;
   transition: all .25s ease;
   margin-top: 10px;

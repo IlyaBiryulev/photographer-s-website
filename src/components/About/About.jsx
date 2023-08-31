@@ -21,8 +21,8 @@ function About({ onRef }) {
           Мне важно не только создавать красивые фотографии, но и передавать настроение, эмоции, искренность.
           Я верю, что именно эти аспекты делают каждое фото неповторимым и ценным.
         </motion.p>
-        <button className='about__link-btn'><Link variants={textAnimation} custom={3} to="/portfolio" className='about__link'>ПОРТФОЛИО</Link></button>
-        <motion.img src={photo} alt='Фотография автора' className='about__img' variants={textAnimation} custom={3}></motion.img>
+        <motion.button className='about__link-btn' variants={textAnimation} custom={3}><Link to="/portfolio" className='about__link'>ПОРТФОЛИО</Link></motion.button>
+        <motion.img src={photo} alt='Фотография автора' className='about__img' variants={textAnimation} custom={4}></motion.img>
       </article>
     </motion.section>
   );
