@@ -31,7 +31,7 @@ function PhotoList({getPhotos, isLoading}) {
       whileInView='visible'
     >
       <motion.h1 className='photo-list__title' variants={textAnimation}>{param.id}</motion.h1>
-      <motion.button className='photo-list__back-btn' onClick={() => navigate(-1)} variants={textAnimation}></motion.button>
+      <motion.button className='photo-list__back-btn' onClick={() => navigate(-1)} variants={textAnimation} whileHover={{ scale: 1.1 }}></motion.button>
       {isLoading && <Preloader/>}
       {!isLoading &&
         <div className='photo-list__wrapper'>

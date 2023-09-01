@@ -21,22 +21,18 @@
   width: 32px;
   height: 32px;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
   margin: 0;
   font-size: 20px;
   font-weight: 600;
   font-style: oblique;
   color: #fff;
-  background-color: transparent;
   border: none;
   position: absolute;
   top: 30px;
   left: 30px;
   cursor: pointer;
-  transition: all .25s;
-}
-
-.photo-list__back-btn:hover {
-  opacity: .8;
 }
 
 .photo-list__wrapper {
