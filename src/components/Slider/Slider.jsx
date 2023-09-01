@@ -1,4 +1,4 @@
-import React, { useEffect, useState, createContext,useCallback } from "react";
+import React, { useEffect, useState, createContext, useCallback } from "react";
 import './Slider.css';
 import PropTypes from "prop-types";
 

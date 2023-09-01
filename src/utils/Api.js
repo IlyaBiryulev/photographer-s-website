@@ -30,3 +30,19 @@ export async function getFolder() {
     console.error(error);
   }
 }
+
+export async function getPhotosById(id) {
+  try {
+    const response = await axios.get(`${BASE_URL}`, {
+      params: {
+        public_key: PUBLIC_KEY,
+        path: `/photo/${id}`,
+        fields: ['_embedded']
+      }
+    });
+    return response
+  } catch (error) {
+    console.error(error);
+  }
+}
+

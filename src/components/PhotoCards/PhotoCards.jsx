@@ -5,7 +5,7 @@ import { photoAnimation } from '../../utils/constants';
 const PhotoCards = ({ card, onPhotoClick }) => {
 
   function handleClick() {
-    onPhotoClick(card);
+    onPhotoClick(card.name);
   }
 
   return (

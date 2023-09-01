@@ -1,8 +1,8 @@
 import './Portfolio.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';
 import PhotoCards from '../PhotoCards/PhotoCards';
-import ImgModal from '../ImgModal/ImgModal';
 import Preloader from '../Preloader/Preloader';
 import useResizeScreen from '../../utils/ResizeScreen';
 import {
@@ -16,8 +16,8 @@ import { motion } from 'framer-motion';
 
 function Portfolio({ photos, onClick, isOpen, isLoading}) {
   const Screen = useResizeScreen();
+  const navigate = useNavigate();
 
-  const [ selectedPhoto, setSelectedPhoto ] = useState(null);
   const [ cardRender, setCardRender] = useState([]);
   const [ photoCard, setPhotoCard] = useState([]);
 
@@ -45,8 +45,8 @@ function Portfolio({ photos, onClick, isOpen, isLoading}) {
       setPhotoCard(photoList);
   }, [cardRender, photos, setPhotoCard]);
 
-  const handleCardClick = (card) => {
-    setSelectedPhoto(card);
+  const handleCardClick = (name) => {
+    navigate(`/portfolio/${name}`)
   }
 
   const handleShowMore = () => {
@@ -100,13 +100,6 @@ function Portfolio({ photos, onClick, isOpen, isLoading}) {
         </motion.div>}
         {ifShowMore()}
       </main>
-      { selectedPhoto !== null &&
-        <ImgModal
-          isOpen={isOpen}
-          photo={selectedPhoto}
-          onClick={onClick}
-      />
-      }
     </div>
   );
 }

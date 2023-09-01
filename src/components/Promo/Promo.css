@@ -29,7 +29,7 @@
   border: none;
   padding: 0;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   cursor: pointer;
   transition: all .45s ease;
@@ -43,5 +43,9 @@
 @media screen and (max-width: 607px) {
   .promo {
     background-position: 35%;
+  }
+
+  .promo__about-ref {
+    left: 45%;
   }
 }

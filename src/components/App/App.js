@@ -5,6 +5,7 @@ import Main from '../Main/Main';
 import Portfolio from '../Portfolio/Portfolio';
 import Filming from '../Filming/Filming';
 import Contacts from '../Contacts/Contacts';
+import PhotoList from '../PhotoList/PhotoList';
 import * as api from '../../utils/Api';
 
 
@@ -51,6 +52,22 @@ function App() {
     },[folder.items]
   );
 
+  const getPhotosById = useCallback(
+    async (id) => {
+      setLoading(true);
+      try {
+        const data = await api.getPhotosById(id)
+        if (data) {
+          return data;
+        }
+      } catch(err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    },[]
+  );
+
   useEffect(() => {
     getPhotoCard();
   },[getPhotoCard])
@@ -63,12 +80,20 @@ function App() {
             <Main />
           }
         />
-        <Route path='/portfolio'
+        <Route exact path='/portfolio'
           element={
             <Portfolio
               photos = {cardPhoto}
               isOpen = {popupOpen}
               onClick = {handlePopupOpen}
+              isLoading = {loading}
+            />
+          }
+        />
+        <Route exact path='/portfolio/:id'
+          element={
+            <PhotoList
+              getPhotos = {getPhotosById}
               isLoading = {loading}
             />
           }

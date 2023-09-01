@@ -13,7 +13,7 @@ function Filming() {
       <div className="filming__item">
         <h1 className='filming__title'>ИНФОРМАЦИЯ О СЪЕМКАХ</h1>
         {filmingData.map((item, i) =>
-          <Accordion item={item} opened={ i === opened } toggle = {setOpened.bind(null, i === opened ? null : i)}/>
+          <Accordion item={item} key={item.id} opened={ i === opened } toggle = {setOpened.bind(null, i === opened ? null : i)}/>
         )}
       </div>
     </div>
