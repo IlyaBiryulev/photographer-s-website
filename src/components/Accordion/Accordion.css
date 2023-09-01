@@ -31,3 +31,16 @@
   width: 520px;
   text-align: justify;
 }
+
+
+@media screen and (max-width: 546px) {
+  .accordion__card {
+    width: 310px;
+    margin: 0 5px;
+  }
+
+  .accordion__content {
+    width: 310px;
+    margin: 0 5px;
+  }
+}
